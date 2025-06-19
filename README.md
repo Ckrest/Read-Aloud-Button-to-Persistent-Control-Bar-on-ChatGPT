@@ -1,6 +1,6 @@
 # Read Aloud Button to Persistent Control Bar on ChatGPT
 
-This Chrome extension duplicates ChatGPT's `Read aloud` button and places it in the persistent composer bar. The cloned button always stays visible so you can start playback even while scrolling through the conversation.
+This extension duplicates ChatGPT's `Read aloud` button and places it in the persistent text bar. The cloned button always stays visible so you can start playback even while scrolling through the conversation.
 
 ## Installation
 
