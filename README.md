@@ -1,25 +1,48 @@
-# Read Aloud Button to Persistent Control Bar on ChatGPT
+# Read Aloud Button for ChatGPT
 
-This extension duplicates ChatGPT's `Read aloud` button and places it in the persistent text bar. The cloned button always stays visible so you can start playback even while scrolling through the conversation.
+A Chrome extension that adds a persistent "Read Aloud" button to ChatGPT's bottom toolbar, making it easy to start audio playback without opening context menus.
+
+## Features
+
+- 🎯 **Always Visible** - Button stays in the bottom toolbar while scrolling
+- 🔇 **Invisible Menu** - Triggers ChatGPT's native Read Aloud feature without showing menus
+- 🎵 **Smart Icons** - Automatically switches between play/stop icons based on audio state
+- ⚡ **Event-Driven** - Uses audio event listeners, no constant polling
+- 🎨 **Native Styling** - Matches ChatGPT's design language
 
 ## Installation
 
-1. Clone or download this repository.
-2. Open **chrome://extensions** in Chrome.
-3. Enable **Developer mode**.
-4. Click **Load unpacked** and select this folder.
+1. Download or clone this repository
+2. Open Chrome and go to `chrome://extensions`
+3. Enable **Developer mode** (toggle in top-right corner)
+4. Click **Load unpacked**
+5. Select the `Read-Aloud-Button-to-Persistent-Control-Bar-on-ChatGPT` folder
 
-The extension will automatically inject the persistent button on pages that match `https://chat.openai.com/*` and `https://chatgpt.com/*`.
+The extension will automatically activate on:
+- `https://chat.openai.com/*`
+- `https://chatgpt.com/*`
 
-## Screenshots
+## How It Works
 
-| Before | After |
-| --- | --- |
-| ![Before screenshot](https://i.imgur.com/D733bfB.png) | ![After screenshot](https://i.imgur.com/AUXU9bf.png) |
+1. The extension adds a speaker icon to the bottom toolbar
+2. Clicking the button opens ChatGPT's "More actions" menu invisibly
+3. It automatically finds and clicks the native "Read aloud" option
+4. The button icon updates to show play/stop states based on audio playback
+5. All menu operations happen off-screen with no visual interference
 
-The "before" screenshot shows the default position of the Read Aloud button. The "after" screenshot demonstrates the duplicated button pinned to the bottom toolbar.
+## Technical Details
 
-## Development
+- Uses event-driven architecture with audio element listeners
+- No constant polling or background processes
+- Minimal performance impact
+- Works with ChatGPT's existing Read Aloud functionality
 
-See `content.js` for the script that clones the original button and keeps it in sync with the state of the toolbar.
+## Files
 
+- `content-simple.js` - Main extension script
+- `manifest.json` - Extension configuration
+- `icons/` - Extension icons
+
+## License
+
+See `LICENSE` file for details.
